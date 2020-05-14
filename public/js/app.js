@@ -14,7 +14,7 @@ messagetwo.textContent=""
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location= searchElemnet.value
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
         messageOne.textContent=""
         messagetwo.textContent=""
     response.json().then((data)=>{
